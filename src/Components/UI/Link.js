@@ -5,7 +5,8 @@ import React from 'react';
 
 const Link = ({ active, children, onClick}) => {
   return (
-    <button 
+    <button
+      className="waves-effect waves-light btn" 
       onClick={onClick} 
       disabled={active}
     >

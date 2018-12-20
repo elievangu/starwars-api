@@ -3,12 +3,13 @@ import React from 'react';
 
 //local import
 
-const PrevButton = ({handlePrevClick}) => {
+const PrevButton = () => {
   return (
     <button
-      onClick={handlePrevClick}
+    className="btn-floating btn-large red pulse"
+      
     >
-      Previous page
+    -
     </button>
   )
 }

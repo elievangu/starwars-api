@@ -3,12 +3,12 @@ import React from 'react';
 
 //local import
 
-const NextButton = ({handleNextClick}) => {
+const NextButton = () => {
   return (
     <button
-      onClick={handleNextClick}
+      className="btn-floating btn-large cyan pulse"
     >
-      Next Page
+    +
     </button>
   )
 }

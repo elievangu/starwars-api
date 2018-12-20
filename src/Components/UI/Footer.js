@@ -2,10 +2,14 @@
 import React from 'react';
 
 //local import
-
-const Footer = ({}) => {
+import NextButton from './NextButton';
+import PrevButton from './PrevButton';
+const Footer = () => {
   return (
-    <footer></footer>
+    <footer>
+      <PrevButton />
+      <NextButton />
+    </footer>
   )
 }
 

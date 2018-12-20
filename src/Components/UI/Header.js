@@ -3,9 +3,9 @@ import React from 'react';
 
 //local import
 
-const Header = ({ category }) => {
+const Header = () => {
   return (
-    <header>Star Wars {category}</header>
+    <header className='row'>Header</header>
   )
 }
 

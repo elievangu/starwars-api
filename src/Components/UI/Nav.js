@@ -1,12 +1,18 @@
 //npm import
 import React from 'react';
 
-//local 
+//local import
+import Link from './Link';
 
-const Nav = ({}) => {
+const Nav = () => {
   return (
-    <nav>
-      
+    <nav className='row'>
+      <Link children='Home'/>
+      <Link children='People'/>
+      <Link children='Planets'/>
+      <Link children='Species'/>
+      <Link children='Starships'/>
+      <Link children='Vehicles'/>
     </nav>
   )
 }
