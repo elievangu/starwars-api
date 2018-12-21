@@ -6,7 +6,7 @@ import React from 'react';
 const PrevButton = () => {
   return (
     <button
-    className="btn-floating btn-large red pulse"
+    className="btn-floating btn-large red pulse prev"
       
     >
     -

@@ -6,8 +6,32 @@
   border-color: red*/
 }
 
+header {
+  text-align: center
+}
+
 .aside {
   position: relative;
   top: -665px;
   left: 530px
+}
+
+.nav {
+  width: 156px;
+  margin-left: 50px;
+  
+}
+
+.next {
+  margin-left: 150px
+}
+
+.prev {
+
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  top: -250px;
 }

@@ -5,7 +5,9 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className='row'>Header</header>
+    <header className='row'>
+      <h2>Header</h2>
+    </header>
   )
 }
 

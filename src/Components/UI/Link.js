@@ -6,7 +6,7 @@ import React from 'react';
 const Link = ({ active, children, onClick}) => {
   return (
     <button
-      className="waves-effect waves-light btn" 
+      className="waves-effect waves-light btn nav" 
       onClick={onClick} 
       disabled={active}
     >
