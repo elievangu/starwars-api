@@ -6,3 +6,8 @@
   border-color: red*/
 }
 
+.aside {
+  position: relative;
+  top: -665px;
+  left: 530px
+}
