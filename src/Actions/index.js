@@ -11,19 +11,69 @@ export const nextPage = () => {
   }
 }
 
-export const setVisibilityFilter = (filter) => {
+
+export const selectCategory= (category) => {
   return {
-    type: 'SET_VISIBILITY_FILTER',
-    filter
+    type: 'SELECT_CATEGORY',
+    category
   }
 }
 
-export const VisibilityFilters = {
-
-  SHOW_FILMS: 'SHOW_FILMS',
-  SHOW_PEOPLE: 'SHOW_PEOPLE',
-  SHOW_PLANETS: 'SHOW_PLANETS',
-  SHOW_SPECIES: 'SHOW_SPECIES',
-  SHOW_STARSHIPS: 'SHOW_STARSHIPS',
-  SHOW_VEHICLES: 'SHOW_VEHICLES'
+export const requestPosts = (category) => {
+  return {
+    type: 'REQUEST_POST',
+    category
+  }
 }
+
+export const receivePosts = (category, json) => {
+  return {
+    type: 'RECEIVE_POSTS',
+    category,
+    posts: json
+  }
+}
+
+
+export const showFilms = (category) => {
+  return {
+    type: 'SHOW_FILMS',
+    category
+  }
+}
+
+export const showPeople = (category) => {
+  return {
+    type: 'SHOW_PEOPLE',
+    category
+  }
+}
+
+export const showPlanets = (category) => {
+  return {
+    type: 'SHOW_PLANETS',
+    category
+  }
+}
+
+export const showSpecies = (category) => {
+  return {
+    type: 'SHOW_SPECIES',
+    category
+  }
+}
+
+export const showStarships = (category) => {
+  return {
+    type: 'SHOW_STARSHIPS',
+    category
+  }
+}
+
+export const showVehicles = (category) => {
+  return {
+    type: 'SHOW_VEHICLES',
+    category
+  }
+}
+
