@@ -6,7 +6,9 @@ import Section from '../Components/UI/Section';
 
 
 const mapStateToProps = (state) => {
-
+  return {
+    category: state.category
+  }
 }
 
 const SectionApp = connect(

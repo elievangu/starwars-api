@@ -3,11 +3,11 @@ import React from 'react';
 
 //local import
 
-const PrevButton = () => {
+const PrevButton = ({ handlePrevClick }) => {
   return (
     <button
-    className="btn-floating btn-large red pulse prev"
-      
+    className="btn-floating btn-large red pulse prev" 
+    onClick={handlePrevClick}  
     >
     -
     </button>

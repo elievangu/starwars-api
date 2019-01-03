@@ -5,7 +5,9 @@ import { connect } from 'react-redux';
 import Article from '../Components/UI/Article';
 
 const mapStateToProps = (state) => {
-
+  return {
+    category: state.category
+  }
 }
 
 const ArticleApp = connect(

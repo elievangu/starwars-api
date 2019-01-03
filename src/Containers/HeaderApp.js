@@ -5,7 +5,9 @@ import { connect } from 'react-redux';
 import Header from '../Components/UI/Header';
 
 const mapStateToProps = (state) => {
-
+  return {
+    category: state.category
+  }
 }
 
 const HeaderApp = connect(

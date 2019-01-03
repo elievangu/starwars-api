@@ -3,10 +3,10 @@ import React from 'react';
 
 //local import
 
-const Header = () => {
+const Header = ({ category }) => {
   return (
     <header className='row'>
-      <h2>Header</h2>
+      <h2>{category}</h2>
     </header>
   )
 }

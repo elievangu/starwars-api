@@ -3,11 +3,11 @@ import React from 'react';
 
 //local import
 
-const Link = ({ active, children, onClick}) => {
+const Link = ({ active, children, handleClick}) => {
   return (
     <button
       className="waves-effect waves-light btn nav" 
-      onClick={onClick} 
+      onClick={handleClick} 
       disabled={active}
     >
       {children}  

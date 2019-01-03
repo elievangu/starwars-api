@@ -5,7 +5,9 @@ import { connect } from 'react-redux';
 import Aside from '../Components/UI/Aside';
 
 const mapStateToProps = (state) => {
-
+  return {
+    name: state.name
+  }
 }
 
 const AsideApp = connect(
