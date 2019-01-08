@@ -1,3 +1,4 @@
+//Synchronous Action Creators
 
 export const prevPage = () => {
   return {
@@ -35,45 +36,45 @@ export const receivePosts = (category, json) => {
 }
 
 
-export const showFilms = (category) => {
+export const showHome = (category) => {
   return {
     type: 'SHOW_FILMS',
-    category
+    category:'film'
   }
 }
 
 export const showPeople = (category) => {
   return {
     type: 'SHOW_PEOPLE',
-    category
+    category:'people'
   }
 }
 
 export const showPlanets = (category) => {
   return {
     type: 'SHOW_PLANETS',
-    category
+    category:'planets'
   }
 }
 
 export const showSpecies = (category) => {
   return {
     type: 'SHOW_SPECIES',
-    category
+    category:'species'
   }
 }
 
 export const showStarships = (category) => {
   return {
     type: 'SHOW_STARSHIPS',
-    category
+    category:'starships'
   }
 }
 
 export const showVehicles = (category) => {
   return {
     type: 'SHOW_VEHICLES',
-    category
+    category:'vehicles'
   }
 }
 
