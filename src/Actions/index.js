@@ -1,8 +1,12 @@
+//npm import
+import axios from 'axios';
+
 //Synchronous Action Creators
+
 
 export const prevPage = () => {
   return {
-    type: 'PREVIOUS_PAGE',
+    type: 'PREVIOUS_PAGE'
   }
 }
 
@@ -78,3 +82,15 @@ export const showVehicles = (category) => {
   }
 }
 
+//asynchronous Actions Creators
+
+export const fetchPosts = (category, page) => {
+  return (dispatch) => {
+    dispatch(requestPosts(category))
+
+    return axios.get(`https://swapi.co/api/${category}/${page}/.json`)
+      .then(
+        res => dispatch(receivePosts(category, res))
+      )
+  }
+}
