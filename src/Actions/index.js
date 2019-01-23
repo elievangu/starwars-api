@@ -40,42 +40,42 @@ export const receivePosts = (category, json) => {
 }
 
 
-export const showHome = (category) => {
+export const showHome = () => {
   return {
     type: 'SHOW_FILMS',
     category:'film'
   }
 }
 
-export const showPeople = (category) => {
+export const showPeople = () => {
   return {
     type: 'SHOW_PEOPLE',
     category:'people'
   }
 }
 
-export const showPlanets = (category) => {
+export const showPlanets = () => {
   return {
     type: 'SHOW_PLANETS',
     category:'planets'
   }
 }
 
-export const showSpecies = (category) => {
+export const showSpecies = () => {
   return {
     type: 'SHOW_SPECIES',
     category:'species'
   }
 }
 
-export const showStarships = (category) => {
+export const showStarships = () => {
   return {
     type: 'SHOW_STARSHIPS',
     category:'starships'
   }
 }
 
-export const showVehicles = (category) => {
+export const showVehicles = () => {
   return {
     type: 'SHOW_VEHICLES',
     category:'vehicles'
@@ -90,7 +90,7 @@ export const fetchPosts = (category, page) => {
 
     return axios.get(`https://swapi.co/api/${category}/${page}/.json`)
       .then(
-        res => dispatch(receivePosts(category, res))
+        res => dispatch(receivePosts(category, res.data))
       )
   }
 }

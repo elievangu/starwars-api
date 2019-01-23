@@ -2,21 +2,21 @@
 import React from 'react';
 
 //local import
-import Article from '../UI/Article';
-import Aside from '../UI/Aside';
-import Section from '../UI/Section'
+import ArticleApp from '../../Containers/ArticleApp';
 import Footer from '../UI/Footer';
-import Header from '../UI/Header';
-import Nav from '../UI/Nav';
+import HeaderApp from '../../Containers/HeaderApp';
+import NavApp from '../../Containers/NavApp';
+import SectionApp from '../../Containers/SectionApp';
+import AsideApp from '../../Containers/AsideApp';
 
 const Planets = () => {
   return (
     <div className='app'>
-      <Header />
-      <Nav />
-      <Section />
-      <Article />
-      <Aside />
+      <HeaderApp />
+      <NavApp />
+      <SectionApp />
+      <ArticleApp />
+      <AsideApp />
       <Footer />
     </div>
   )
