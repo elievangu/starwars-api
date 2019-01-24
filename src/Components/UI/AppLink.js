@@ -3,7 +3,7 @@ import React from 'react';
 
 //local import
 
-const Link = ({ active, children, handleClick}) => {
+const AppLink = ({ active, children, handleClick}) => {
   return (
     <button
       className="waves-effect waves-light btn nav" 
@@ -15,4 +15,4 @@ const Link = ({ active, children, handleClick}) => {
   )
 }
 
-export default Link;
+export default AppLink;

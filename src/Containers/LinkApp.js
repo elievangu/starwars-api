@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 
 //local import
-import Link from '../Components/UI/Link';
+import AppLink from '../Components/UI/AppLink';
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -15,6 +15,6 @@ const mapDispatchToProps = (dispatch) => {
 const LinkApp = connect(
   null,
   mapDispatchToProps
-)(Link)
+)(AppLink)
 
 export default LinkApp;

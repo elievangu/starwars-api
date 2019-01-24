@@ -1,9 +1,9 @@
 .app {
-  /*width: 900px;
+  width: 900px;
   height: 900px;
   border-style: solid;
   border-width: 2px;
-  border-color: red*/
+  border-color: red
 }
 
 header {
@@ -24,10 +24,6 @@ header {
 
 .next {
   margin-left: 150px
-}
-
-.prev {
-
 }
 
 footer {
