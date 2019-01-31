@@ -3,7 +3,6 @@ import React from 'react';
 
 //local import
 import ArticleApp from '../../Containers/ArticleApp';
-import AsideApp from '../../Containers/AsideApp';
 import SectionApp from '../../Containers/SectionApp';
 import Footer from '../UI/Footer';
 import HeaderApp from '../../Containers/HeaderApp';
@@ -16,7 +15,6 @@ const Films = () => {
       <NavApp />
       <SectionApp />
       <ArticleApp />
-      <AsideApp />
       <Footer />
     </div> 
   )

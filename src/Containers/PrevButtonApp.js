@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 
 //local import
 import PrevButton from '../Components/UI/PrevButton';
-import prevPage from '../Actions/index';
+import { fetchPrevPage } from '../Actions/index';
 
 const mapDispatchToProps = (dispatch) => {
   return {
     handlePrevClick: () => {
-      dispatch(prevPage())
+      dispatch(fetchPrevPage())
     }
   }
 }

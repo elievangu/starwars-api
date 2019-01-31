@@ -1,23 +1,27 @@
 //npm import
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createLogger } from 'redux-logger';
+import { logger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
 //local import
-import './index.css';
 import rootReducer from './Reducers/rootReducer';
 import Home from './Components/Templates/Home';
+import '../src/index.css';
 
-let store = createStore(
+export let store = createStore(
   rootReducer,
-  applyMiddleware(
-    thunkMiddleware,
-    createLogger
+  composeWithDevTools(
+    applyMiddleware(
+      thunkMiddleware,
+      logger
+    )
   )
+  
 )
 
 const App = () => {

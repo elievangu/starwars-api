@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 
 //local import
 import NextButton from '../Components/UI/NextButton';
-import { nextPage } from '../Actions/index';
+import { fetchNextPage } from '../Actions/index';
 
 
 const mapDispatchToProps = (dispatch) => {
   return {
     handleNextClick: () => {
-      dispatch(nextPage())
+      dispatch(fetchNextPage())
     }
   }
 }

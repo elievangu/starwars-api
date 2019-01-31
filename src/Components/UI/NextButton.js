@@ -9,7 +9,7 @@ const NextButton = ({ handleNextClick }) => {
       className="btn-floating btn-large cyan pulse next" 
       onClick={handleNextClick}
     >
-    +
+    NEXT
     </button>
   )
 }

@@ -2,13 +2,13 @@
 import React from 'react';
 
 //local import
-import NextButton from './NextButton';
-import PrevButton from './PrevButton';
+import NextButtonApp from '../../Containers/NextButtonApp'
+import PrevButtonApp from '../../Containers/PrevButtonApp';
 const Footer = () => {
   return (
     <footer>
-      <PrevButton />
-      <NextButton />
+      <PrevButtonApp />
+      <NextButtonApp />
     </footer>
   )
 }

@@ -1,18 +1,24 @@
 //npm import
 import axios from 'axios';
 
+//local import
+import { store } from '../index';
+
 //Synchronous Action Creators
 
 
 export const prevPage = () => {
   return {
     type: 'PREVIOUS_PAGE'
+
   }
 }
 
+
 export const nextPage = () => {
   return {
-    type: 'NEXT_PAGE'
+    type: 'NEXT_PAGE',
+    
   }
 }
 
@@ -26,71 +32,58 @@ export const selectCategory= (category) => {
 
 export const requestPosts = (category) => {
   return {
-    type: 'REQUEST_POST',
+    type: 'REQUEST_POSTS',
     category
   }
 }
 
-export const receivePosts = (category, json) => {
+export const receivePosts = (json) => {
   return {
     type: 'RECEIVE_POSTS',
-    category,
-    posts: json
+    posts: json.data.results,
+    previous: json.data.previous,
+    next: json.data.next
   }
 }
 
-
-export const showHome = () => {
-  return {
-    type: 'SHOW_FILMS',
-    category:'film'
-  }
-}
-
-export const showPeople = () => {
-  return {
-    type: 'SHOW_PEOPLE',
-    category:'people'
-  }
-}
-
-export const showPlanets = () => {
-  return {
-    type: 'SHOW_PLANETS',
-    category:'planets'
-  }
-}
-
-export const showSpecies = () => {
-  return {
-    type: 'SHOW_SPECIES',
-    category:'species'
-  }
-}
-
-export const showStarships = () => {
-  return {
-    type: 'SHOW_STARSHIPS',
-    category:'starships'
-  }
-}
-
-export const showVehicles = () => {
-  return {
-    type: 'SHOW_VEHICLES',
-    category:'vehicles'
-  }
-}
 
 //asynchronous Actions Creators
 
-export const fetchPosts = (category, page) => {
+export const fetchPosts = (category) => {
+  
   return (dispatch) => {
     dispatch(requestPosts(category))
 
-    return axios.get(`https://swapi.co/api/${category}/${page}/.json`)
-      .then(
-        res => dispatch(receivePosts(category, res.data))
+    return axios.all([
+      axios.get(`https://swapi.co/api/${category}/.json`)
+    ])
+      .then(axios.spread((json1) => {
+        dispatch(receivePosts(json1));
+        })
       )
   }
 }
+
+export const fetchPrevPage = (dispatch) => {
+  return (dispatch) => {
+
+    return axios.get(`${store.getState().posts.previous}`)
+    .then(
+      json => dispatch(receivePosts(json))
+    )
+  }
+}
+
+export const fetchNextPage = (dispatch) => {
+  return (dispatch) => {
+    
+    return axios.get(`${store.getState().posts.next}`)
+    .then(
+      json => dispatch(receivePosts(json))
+    )
+}
+  }
+  
+
+
+

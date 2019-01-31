@@ -7,7 +7,6 @@ import Footer from '../UI/Footer';
 import HeaderApp from '../../Containers/HeaderApp';
 import NavApp from '../../Containers/NavApp';
 import SectionApp from '../../Containers/SectionApp';
-import AsideApp from '../../Containers/AsideApp';
 
 const Planets = () => {
   return (
@@ -16,7 +15,6 @@ const Planets = () => {
       <NavApp />
       <SectionApp />
       <ArticleApp />
-      <AsideApp />
       <Footer />
     </div>
   )

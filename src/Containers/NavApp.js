@@ -3,34 +3,34 @@ import { connect } from 'react-redux';
 
 //local import
 import Nav from '../Components/UI/Nav';
-import { showHome, showPeople, showPlanets, showSpecies, showStarships, showVehicles } from '../Actions/index'
+import { fetchPosts } from '../Actions/index'
 
 const mapDispatchToProps = (dispatch) => {
   return {
 
-onHomeClick: () => {
-  dispatch(showHome())
-},
+    onHomeClick: (category) => {
+      dispatch(fetchPosts('films'))
+    },
 
-onPeopleClick: () => {
-  dispatch(showPeople())
-},
+    onPeopleClick: (category) => {
+      dispatch(fetchPosts('people'))
+    },
 
-onPlanetsClick: () => {
-  dispatch(showPlanets())
-},
+    onPlanetsClick: (category) => {
+      dispatch(fetchPosts('planets'))
+    },
 
-onSpeciesClick: () => {
-  dispatch(showSpecies())
-},
+    onSpeciesClick: (category) => {
+      dispatch(fetchPosts('species'))
+    },
 
-onStarshipsClick: () => {
-  dispatch(showStarships())
-},
+    onStarshipsClick: (category) => {
+      dispatch(fetchPosts('starships'))
+    },
 
-onVehiclesClick: () => {
-  dispatch(showVehicles())
-}
+    onVehiclesClick: (category) => {
+      dispatch(fetchPosts('vehicles'))
+    }
   }
 }
 

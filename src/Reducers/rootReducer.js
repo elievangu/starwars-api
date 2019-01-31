@@ -2,13 +2,11 @@
 import { combineReducers } from 'redux';
 
 //local import
-import categories from './categories';
-import pages from './pages';
+import category from './request';
 import posts from './posts';
 
 const rootReducer = combineReducers({
-  categories,
-  pages,
+  category,
   posts
 })
 

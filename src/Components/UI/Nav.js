@@ -1,17 +1,45 @@
 //npm import
 import React from 'react';
 //local import
-import AppLink from './AppLink';
 
 const Nav = ({ onHomeClick, onPeopleClick, onPlanetsClick, onSpeciesClick, onStarshipsClick, onVehiclesClick }) => {
   return (
     <nav className='row'>
-      <a href='/home'><AppLink children='Home' handleClick={onHomeClick} /></a>
-      <a href='/people'><AppLink children='People' handleClick={onPeopleClick}/></a>
-      <a href='/planets'><AppLink children='Planets' handleClick={onPlanetsClick}/></a>
-      <a href='/species'><AppLink children='Species' handleClick={onSpeciesClick}/></a>
-      <a href='/starships'><AppLink children='Starships' handleClick={onStarshipsClick}/></a>
-      <a href='/vehicles'><AppLink children='Vehicles' handleClick={onVehiclesClick}/></a>
+      <button
+        className="waves-effect waves-light btn nav" 
+        onClick={onHomeClick}>
+          Films  
+      </button>
+  
+      <button
+        className="waves-effect waves-light btn nav" 
+        onClick={onPeopleClick}>
+          People 
+      </button>
+    
+      <button
+        className="waves-effect waves-light btn nav" 
+        onClick={onPlanetsClick}>
+          Planets 
+      </button>
+    
+      <button
+        className="waves-effect waves-light btn nav" 
+        onClick={onSpeciesClick}>
+          Species 
+      </button>
+  
+      <button
+        className="waves-effect waves-light btn nav" 
+        onClick={onStarshipsClick}>
+          Starships  
+      </button>
+  
+      <button
+        className="waves-effect waves-light btn nav" 
+        onClick={onVehiclesClick}>
+          Vehicles 
+      </button>
     </nav>
   )
 }

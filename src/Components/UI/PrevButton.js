@@ -9,7 +9,7 @@ const PrevButton = ({ handlePrevClick }) => {
     className="btn-floating btn-large red pulse prev" 
     onClick={handlePrevClick}  
     >
-    -
+    PREV.
     </button>
   )
 }
