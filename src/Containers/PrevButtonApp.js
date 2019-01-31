@@ -1,6 +1,6 @@
 //npm import
 import { connect } from 'react-redux';
-
+import { withRouter } from 'react-router-dom';
 //local import
 import PrevButton from '../Components/UI/PrevButton';
 import { fetchPrevPage } from '../Actions/index';
@@ -13,9 +13,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const PrevButtonApp = connect(
+const PrevButtonApp = withRouter(connect(
   null,
   mapDispatchToProps
-)(PrevButton)
+)(PrevButton))
 
 export default PrevButtonApp;

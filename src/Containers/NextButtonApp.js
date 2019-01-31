@@ -1,6 +1,6 @@
 //npm import
 import { connect } from 'react-redux'
-
+import { withRouter } from 'react-router-dom';
 //local import
 import NextButton from '../Components/UI/NextButton';
 import { fetchNextPage } from '../Actions/index';
@@ -14,9 +14,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const NextButtonApp = connect(
+const NextButtonApp = withRouter(connect(
   null,
   mapDispatchToProps
-)(NextButton)
+)(NextButton))
 
 export default NextButtonApp;
