@@ -10,7 +10,7 @@ import SectionApp from '../../Containers/SectionApp';
 
 const Starships = () => {
   return (
-    <div className='app'>
+    <div className='container'>
       <HeaderApp />
       <NavApp />
       <SectionApp />

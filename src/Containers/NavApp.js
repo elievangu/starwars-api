@@ -1,6 +1,5 @@
 //npm import
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 
 //local import
 import Nav from '../Components/UI/Nav';
@@ -35,9 +34,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const NavApp = withRouter(connect(
+const NavApp = connect(
   null,
   mapDispatchToProps
-)(Nav))
+)(Nav) 
 
 export default NavApp;

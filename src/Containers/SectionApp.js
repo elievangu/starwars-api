@@ -1,6 +1,6 @@
 //npm import
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+
 //local import
 import Section from '../Components/UI/Section';
 
@@ -11,9 +11,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-const SectionApp = withRouter(connect(
+const SectionApp = connect(
   mapStateToProps,
   null
-)(Section))
+)(Section)
 
 export default SectionApp;

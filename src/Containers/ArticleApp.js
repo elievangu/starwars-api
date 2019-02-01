@@ -1,7 +1,6 @@
 //npm import
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 
 //local import
 import Article from '../Components/UI/Article';
@@ -13,9 +12,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-const ArticleApp = withRouter(connect(
+const ArticleApp = connect(
   mapStateToProps,
   null
-)(Article))
+)(Article)
 
 export default ArticleApp;

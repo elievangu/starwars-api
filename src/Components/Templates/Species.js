@@ -10,7 +10,7 @@ import SectionApp from '../../Containers/SectionApp';
 
 const Species = () => {
   return (
-    <div className='app'>
+    <div className='container'>
       <HeaderApp />
       <NavApp />
       <SectionApp />
