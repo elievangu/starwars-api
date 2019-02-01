@@ -1,45 +1,47 @@
 //npm import
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 //local import
 
-const Nav = ({ onHomeClick, onPeopleClick, onPlanetsClick, onSpeciesClick, onStarshipsClick, onVehiclesClick }) => {
+const Nav = ({ onFilmsClick, onPeopleClick, onPlanetsClick, onSpeciesClick, onStarshipsClick, onVehiclesClick }) => {
   return (
     <nav className='row'>
-      <button
+      <Link to='/films'
         className="waves-effect waves-light btn nav" 
-        onClick={onHomeClick}>
+        onClick={onFilmsClick}>
           Films  
-      </button>
+      </Link>
   
-      <button
+      <Link to='/people'
         className="waves-effect waves-light btn nav" 
         onClick={onPeopleClick}>
           People 
-      </button>
+      </Link>
     
-      <button
+      <Link to='/planets'
         className="waves-effect waves-light btn nav" 
         onClick={onPlanetsClick}>
           Planets 
-      </button>
+      </Link>
     
-      <button
+      <Link to='/species'
         className="waves-effect waves-light btn nav" 
         onClick={onSpeciesClick}>
           Species 
-      </button>
+      </Link>
   
-      <button
+      <Link to='/starships'
         className="waves-effect waves-light btn nav" 
         onClick={onStarshipsClick}>
           Starships  
-      </button>
+      </Link>
   
-      <button
+      <Link to='/vehicles'
         className="waves-effect waves-light btn nav" 
         onClick={onVehiclesClick}>
           Vehicles 
-      </button>
+      </Link>
     </nav>
   )
 }

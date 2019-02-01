@@ -10,7 +10,7 @@ import SectionApp from '../../Containers/SectionApp';
 
 const People = () => {
   return (
-    <div className='app'>
+    <div className='container'>
       <HeaderApp />
       <NavApp />
       <SectionApp />
