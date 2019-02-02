@@ -1,5 +1,6 @@
 //npm import
 import React from 'react';
+import PropTypes from 'prop-types';
 
 //local import
 
@@ -13,5 +14,7 @@ const NextButton = ({ handleNextClick }) => {
     </button>
   )
 }
-
+ NextButton.propTypes = {
+  handleNextClick: PropTypes.func.isRequired
+ }
 export default NextButton;

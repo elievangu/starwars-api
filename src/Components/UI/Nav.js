@@ -1,6 +1,7 @@
 //npm import
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 //local import
 
@@ -45,5 +46,12 @@ const Nav = ({ onFilmsClick, onPeopleClick, onPlanetsClick, onSpeciesClick, onSt
     </nav>
   )
 }
-
+Nav.propTypes = {
+  onFilmsClick: PropTypes.func.isRequired,
+  onPeopleClick: PropTypes.func.isRequired,
+  onPlanetsClick: PropTypes.func.isRequired,
+  onSpeciesClick: PropTypes.func.isRequired,
+  onStarshipsClick: PropTypes.func.isRequired,
+  onVehiclesClick: PropTypes.func.isRequired
+}
 export default Nav;

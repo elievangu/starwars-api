@@ -1,6 +1,6 @@
 //npm import
 import React from 'react';
-
+import PropTypes from 'prop-types';
 //local import
 
 const Header = ({ category }) => {
@@ -11,4 +11,7 @@ const Header = ({ category }) => {
   )
 }
 
+Header.propTypes = {
+  category: PropTypes.string.isRiquired
+}
 export default Header;  
