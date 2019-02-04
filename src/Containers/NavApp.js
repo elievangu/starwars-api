@@ -8,7 +8,7 @@ import { fetchPosts } from '../Actions/index'
 const mapDispatchToProps = (dispatch) => {
   return {
 
-    onHomeClick: (category) => {
+    onFilmsClick: (category) => {
       dispatch(fetchPosts('films'))
     },
 

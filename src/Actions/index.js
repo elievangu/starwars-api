@@ -54,13 +54,10 @@ export const fetchPosts = (category) => {
   return (dispatch) => {
     dispatch(requestPosts(category))
 
-    return axios.all([
-      axios.get(`https://swapi.co/api/${category}/.json`)
-    ])
-      .then(axios.spread((json1) => {
-        dispatch(receivePosts(json1));
-        })
-      )
+    return axios.get(`https://swapi.co/api/${category}/.json`)
+    .then(
+      json => dispatch(receivePosts(json))
+    )   
   }
 }
 

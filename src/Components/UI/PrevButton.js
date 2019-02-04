@@ -1,5 +1,6 @@
 //npm import
 import React from 'react';
+import PropTypes from 'prop-types';
 
 //local import
 
@@ -13,5 +14,7 @@ const PrevButton = ({ handlePrevClick }) => {
     </button>
   )
 }
-
+PrevButton.propTypes = {
+  handlePrevClick: PropTypes.func.isRequired
+}
 export default PrevButton;

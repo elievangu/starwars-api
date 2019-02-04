@@ -1,15 +1,17 @@
 //npm import
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 //local import
 
-const Nav = ({ onHomeClick, onPeopleClick, onPlanetsClick, onSpeciesClick, onStarshipsClick, onVehiclesClick }) => {
+const Nav = ({ onFilmsClick, onPeopleClick, onPlanetsClick, onSpeciesClick, onStarshipsClick, onVehiclesClick }) => {
   return (
     <nav className='row'>
       <Link
         to='/films'
         className="waves-effect waves-light btn nav" 
-        onClick={onHomeClick}>
+        onClick={onFilmsClick}>
           Films  
       </Link>
   
@@ -51,4 +53,12 @@ const Nav = ({ onHomeClick, onPeopleClick, onPlanetsClick, onSpeciesClick, onSta
   )
 }
 
+Nav.propTypes = {
+  onFilmsClick: PropTypes.func.isRequired,
+  onPeopleClick: PropTypes.func.isRequired,
+  onPlanetsClick: PropTypes.func.isRequired,
+  onSpeciesClick: PropTypes.func.isRequired,
+  onStarshipsClick: PropTypes.func.isRequired,
+  onVehiclesClick: PropTypes.func.isRequired
+}
 export default Nav;

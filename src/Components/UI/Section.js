@@ -1,5 +1,6 @@
 //npm import
 import React from 'react';
+import PropTypes from 'prop-types';
 
 //local import
 
@@ -16,6 +17,10 @@ const Section = ({ category }) => {
     </div>
     
   )
+}
+
+Section.propTypes = {
+  category: PropTypes.string.isRequired
 }
 
 export default Section;
