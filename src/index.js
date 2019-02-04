@@ -15,6 +15,7 @@ import Planets from './Components/Templates/Planets';
 import Species from './Components/Templates/Species';
 import Starships from './Components/Templates/Starships';
 import Vehicles from './Components/Templates/Vehicles';
+import Home from './Components/Templates/Home';
 
 export let store = configureStore()
 
@@ -23,6 +24,7 @@ const ApiApp = () => {
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <Switch>
+          <Route path='/' render={Home}></Route>
           <Route path='/films' render={Films}></Route>
           <Route path='/people' render={People}></Route>
           <Route path='/planets' render={Planets}></Route>
