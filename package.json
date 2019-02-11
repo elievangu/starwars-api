@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "connected-react-router": "^6.2.2",
+    "express": "^4.16.4",
     "history": "^4.7.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -19,7 +20,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build server": "babel index.js -d dist",
+    "start server": "npm run build && nodemon dist/index.js"
+
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,6 +36,8 @@
   ],
   "devDependencies": {
     "@babel/traverse": "^7.2.3",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "redux-devtools-extension": "^2.13.7"
   }
 }
