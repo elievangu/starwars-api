@@ -32,6 +32,7 @@
   ],
   "devDependencies": {
     "@babel/traverse": "^7.2.3",
+    "eslint-plugin-react": "^7.12.4",
     "redux-devtools-extension": "^2.13.7"
   }
 }

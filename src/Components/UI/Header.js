@@ -12,6 +12,6 @@ const Header = ({ category }) => {
 }
 
 Header.propTypes = {
-  category: PropTypes.string.isRiquired
+  category: PropTypes.string
 }
 export default Header;  
