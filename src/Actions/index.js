@@ -84,7 +84,7 @@ export const fetchPosts = (category) => {
 export const fetchPrevPage = (dispatch) => {
   return (dispatch) => {
     dispatch(prevPage())
-    return axios.get(`https://swapi.co/api/${store.getState().category}/${store.getState().page}/.json`)
+    return axios.get(`https://swapi.co/api/${store.getState().category}/${store.getState().counter.page}/.json`)
       .then(
         json => {
           dispatch(receivePosts(json))
@@ -97,7 +97,7 @@ export const fetchPrevPage = (dispatch) => {
 export const fetchNextPage = (dispatch) => {
   return (dispatch) => {
     dispatch(nextPage())
-    return axios.get(`https://swapi.co/api/${store.getState().category}/${store.getState().page}/.json`)
+    return axios.get(`https://swapi.co/api/${store.getState().category}/${store.getState().counter.page}/.json`)
       .then(
         json => {
           dispatch(receivePosts(json))

@@ -9,7 +9,11 @@ const page = (state = initialState, action) => {
       return initialState
     
     case 'PREVIOUS_PAGE':
-      return state - 1
+      
+      return (
+        state - 1 < 1 ?
+          1 : state - 1
+      )
     
     case 'NEXT_PAGE':
       return state + 1
