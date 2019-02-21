@@ -1,33 +1,105 @@
-.app {
-  width: 900px;
-  height: 900px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: red
-}
-
 header {
-  text-align: center
-}
-
-.aside {
-  position: relative;
-  top: -665px;
-  left: 530px
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 .nav {
-  width: 156px;
-  margin-left: 50px;
+  width: 100%;
+  background-color: #EE6E73;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  margin: .5rem 0 1rem 0;
+  border-radius: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: -webkit-flex;
+  flex-wrap: wrap
+
+
+}
+
+.nav > a {
+  width: 185px;
+  margin: 10px;
+  background-color: #2BBBAD;
+  padding-left: 26px;
+  margin-left: 17px;
+  font-size: 25px;
+  
+  
   
 }
 
-.next {
-  margin-left: 150px
+.content {
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.content > section, .content > article {
+  width: 40%;
+  margin: 10px;
+}
+
+.content > div.chart, .content > footer {
+  width: 55%
+}
+
+section {
+  width: 40%;
+  background-color: #2196F3;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  padding: 24px;
+  margin: .5rem 0 1rem 0;
+  border-radius: 2px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 65px;
+  padding-top: 64px;
+  padding-bottom: 50px
+  
+}
+
+.chart {
+  width: 55%;
+  float: right;
+  
+  
+}
+
+article {
+  width: 100%;
+  background-color: #009688;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  padding: 24px;
+  margin: .5rem 0 1rem 0;
+  border-radius: 2px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px
+}
+
 
 footer {
   text-align: center;
-  position: relative;
-  top: 10px;
+  width: 55%;
+  padding-top: 90px;
+  height: 300px;
+  float: right
+}
+
+.next {
+ margin-left: 100px
+}
+
+.prev {
+  margin-right: 100px
+}
+
+i {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: black
+}
+
+span {
+  color: #D72233
 }

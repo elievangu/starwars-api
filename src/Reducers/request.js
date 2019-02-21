@@ -2,8 +2,8 @@
 
 //local import
 
-const category = (state = '', action) => {
-  switch(action.type) {
+const category = (state = 'Select your category !', action) => {
+  switch (action.type) {
     case 'REQUEST_POSTS':
       return action.category
 

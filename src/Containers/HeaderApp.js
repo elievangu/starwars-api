@@ -1,18 +1,18 @@
 //npm import
 import { connect } from 'react-redux';
-import {withRouter } from 'react-router-dom';
+
 //local import
 import Header from '../Components/UI/Header';
 
 const mapStateToProps = (state) => {
   return {
-    category: state.category
+    category: state.category.charAt(0).toUpperCase() + state.category.slice(1)
   }
 }
 
-const HeaderApp = withRouter(connect(
+const HeaderApp = connect(
   mapStateToProps,
   null
-)(Header))
+)(Header)
 
 export default HeaderApp;

@@ -7,16 +7,22 @@ import Footer from '../UI/Footer';
 import HeaderApp from '../../Containers/HeaderApp';
 import NavApp from '../../Containers/NavApp';
 import SectionApp from '../../Containers/SectionApp';
+import ChartApp from '../../Containers/ChartApp';
 
 const People = () => {
   return (
     <div className='container'>
       <HeaderApp />
       <NavApp />
-      <SectionApp />
-      <ArticleApp />
-      <Footer />
-    </div>
+      <div className="content">
+        <SectionApp />
+        <ChartApp />
+        <ArticleApp />
+      </div>
+      <div className="navigation">
+        <Footer />
+      </div> 
+    </div> 
   )
 }
 

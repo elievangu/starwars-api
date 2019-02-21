@@ -4,22 +4,21 @@ import PropTypes from 'prop-types';
 
 //local import
 
-const Section = ({ category }) => {
+const Section = ({ name }) => {
   return (
-    <div className="row">
-      <div className="col s12 m5">
-        <section className="card-panel blue">
-          <span className="white-text">
-            {category}
-          </span>
-        </section>
-      </div>
-    </div>
-    
+    <section className="">
+      <span className="white-text">
+        {name}
+      </span>
+    </section>    
   )
 }
 
 Section.propTypes = {
   category: PropTypes.string.isRequired
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> new-version
 export default Section;

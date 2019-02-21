@@ -1,23 +1,33 @@
 //npm import
-import React from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import React from "react";
+import { connect } from "react-redux";
 
 
 //local import
-import Article from '../Components/UI/Article';
+import Article from "../Components/UI/Article";
 
 const mapStateToProps = (state) => {
+  const array = Object.entries(state.posts.posts);
+
   return {
-    name: state.posts.posts.map(post => 
-      post.name ? <li key={post.name}>{post.name}</li> : <li key={post.title}>{post.title}</li>)  
-  }
-}
+    name: array.map((x) => (
+      <li key={x[0]} className="items">
+        {(Array.isArray(x[1]) ?
+          null :
+          (x[0].replace(/_/g, " ").charAt(0).toUpperCase() + x[0].replace(/_/g, " ").slice(1)) + " : " + x[1])} 
+      </li>
+    ))
+  };
+};
 
-const ArticleApp = withRouter(connect(
-  mapStateToProps,
-  null
-)(Article))
+      const ArticleApp = connect(
+        mapStateToProps,
+        null
+      )(Article);
 
+<<<<<<< HEAD
 
 export default ArticleApp;
+=======
+      export default ArticleApp;
+>>>>>>> new-version

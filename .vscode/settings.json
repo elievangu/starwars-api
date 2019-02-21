@@ -1,3 +1,9 @@
 {
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "eslint.enable": false,
+  "eslint.autoFixOnSave": true,
+  "prettier.bracketSpacing": false,
+  "editor.fontFamily": "Fira Code",
+  "prettier.eslintIntegration": true,
+  "prettier.semi": false
 }

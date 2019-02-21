@@ -1,25 +1,31 @@
 //npm import
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { logger } from 'redux-logger';
-import thunkMiddleware from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+<<<<<<< HEAD
 import { Router, Route, Switch } from 'react-router';
 import createHistory from 'history/createBrowserHistory'
 import * as serviceWorker from './serviceWorker';
 
 //local import
 import rootReducer from './Reducers/rootReducer';
+=======
+import { Route, Switch } from 'react-router';
+import { ConnectedRouter } from 'connected-react-router';
+import * as serviceWorker from './serviceWorker';
+
+//local import
+import configureStore, { history } from './Store/configureStore';
+>>>>>>> new-version
 import '../src/index.css';
 import Films from './Components/Templates/Films';
 import People from './Components/Templates/People';
-import Species from './Components/Templates/Species';
 import Planets from './Components/Templates/Planets';
+import Species from './Components/Templates/Species';
 import Starships from './Components/Templates/Starships';
 import Vehicles from './Components/Templates/Vehicles';
 import Home from './Components/Templates/Home';
+<<<<<<< HEAD
 
 const history = createHistory()
 
@@ -32,10 +38,15 @@ export let store = createStore(
     )
   ) 
 )
+=======
 
-const App = () => {
+export let store = configureStore()
+>>>>>>> new-version
+
+const ApiApp = () => {
   return (
     <Provider store={store}>
+<<<<<<< HEAD
       <Router history={history}>
         <Switch>
           <Route exact path='/' component={Home} />
@@ -47,11 +58,24 @@ const App = () => {
           <Route path='/vehicles' component={Vehicles}/>
         </Switch>  
       </Router>
+=======
+      <ConnectedRouter history={history}>
+        <Switch>
+          <Route path='/' render={Home}></Route>
+          <Route path='/films' render={Films}></Route>
+          <Route path='/people' render={People}></Route>
+          <Route path='/planets' render={Planets}></Route>
+          <Route path='/species' render={Species}></Route>
+          <Route path='/starships' render={Starships}></Route>
+          <Route path='/vehicles' render={Vehicles}></Route>
+        </Switch>
+      </ConnectedRouter>    
+>>>>>>> new-version
     </Provider>
   )
 }
 ReactDOM.render(
-  <App />, 
+  <ApiApp/>, 
   document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
