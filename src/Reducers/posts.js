@@ -4,22 +4,18 @@
 
 const initialState = {
   isFetching: false,
-  previous:'',
-  next:'',
   posts: []
 }
 
 const posts = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
 
     case 'RECEIVE_POSTS':
       return Object.assign({}, state, {
         isFetching: false,
-        previous: action.previous,
-        next: action.next,
-        posts: action.posts 
+        posts: action.posts
       })
-       
+
     default:
       return state
   }

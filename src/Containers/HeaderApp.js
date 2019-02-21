@@ -6,7 +6,7 @@ import Header from '../Components/UI/Header';
 
 const mapStateToProps = (state) => {
   return {
-    category: state.category
+    category: state.category.charAt(0).toUpperCase() + state.category.slice(1)
   }
 }
 

@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const Nav = ({ onFilmsClick, onPeopleClick, onPlanetsClick, onSpeciesClick, onStarshipsClick, onVehiclesClick }) => {
   return (
-    <nav className='row'>
+    <div className="nav">
       <Link
         to='/films'
         className="waves-effect waves-light btn nav" 
@@ -49,7 +49,7 @@ const Nav = ({ onFilmsClick, onPeopleClick, onPlanetsClick, onSpeciesClick, onSt
         onClick={onVehiclesClick}>
           Vehicles 
       </Link>
-    </nav>
+    </div>
   )
 }
 

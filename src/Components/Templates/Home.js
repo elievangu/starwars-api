@@ -7,15 +7,19 @@ import SectionApp from '../../Containers/SectionApp';
 import Footer from '../UI/Footer';
 import HeaderApp from '../../Containers/HeaderApp';
 import NavApp from '../../Containers/NavApp';
+import ChartApp from '../../Containers/ChartApp';
 
 const Home = () => {
   return (
     <div className='container'>
       <HeaderApp />
       <NavApp />
-      <SectionApp />
-      <ArticleApp />
-      <Footer />
+      <div className="content">
+        <SectionApp />
+        <ChartApp />
+        <ArticleApp />
+        <Footer />
+      </div>  
     </div> 
   )
 }

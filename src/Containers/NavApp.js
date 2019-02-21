@@ -37,6 +37,6 @@ const mapDispatchToProps = (dispatch) => {
 const NavApp = connect(
   null,
   mapDispatchToProps
-)(Nav) 
+)(Nav)
 
 export default NavApp;

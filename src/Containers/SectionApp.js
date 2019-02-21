@@ -7,7 +7,7 @@ import Section from '../Components/UI/Section';
 
 const mapStateToProps = (state) => {
   return {
-    category: state.category
+    name: state.posts.posts.name ? state.posts.posts.name : state.posts.posts.title
   }
 }
 

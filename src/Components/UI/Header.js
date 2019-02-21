@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const Header = ({ category }) => {
   return (
-    <header className='row'>
+    <header>
       <h2>{category}</h2>
     </header>
   )
