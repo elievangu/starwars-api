@@ -14,15 +14,9 @@ const NextButton = ({ handleNextClick }) => {
     </button>
   )
 }
-<<<<<<< HEAD
- NextButton.propTypes = {
-  handleNextClick: PropTypes.func.isRequired
- }
-=======
 
 NextButton.propTypes = {
   handleNextClick: PropTypes.func.isRequired
 }
 
->>>>>>> new-version
 export default NextButton;

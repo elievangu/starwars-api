@@ -25,9 +25,4 @@ const mapStateToProps = (state) => {
         null
       )(Article);
 
-<<<<<<< HEAD
-
-export default ArticleApp;
-=======
       export default ArticleApp;
->>>>>>> new-version

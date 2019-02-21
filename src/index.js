@@ -2,21 +2,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-<<<<<<< HEAD
-import { Router, Route, Switch } from 'react-router';
-import createHistory from 'history/createBrowserHistory'
-import * as serviceWorker from './serviceWorker';
-
-//local import
-import rootReducer from './Reducers/rootReducer';
-=======
 import { Route, Switch } from 'react-router';
 import { ConnectedRouter } from 'connected-react-router';
 import * as serviceWorker from './serviceWorker';
 
 //local import
 import configureStore, { history } from './Store/configureStore';
->>>>>>> new-version
 import '../src/index.css';
 import Films from './Components/Templates/Films';
 import People from './Components/Templates/People';
@@ -25,40 +16,12 @@ import Species from './Components/Templates/Species';
 import Starships from './Components/Templates/Starships';
 import Vehicles from './Components/Templates/Vehicles';
 import Home from './Components/Templates/Home';
-<<<<<<< HEAD
-
-const history = createHistory()
-
-export let store = createStore(
-  rootReducer,
-  composeWithDevTools(
-    applyMiddleware(
-      thunkMiddleware,
-      logger
-    )
-  ) 
-)
-=======
 
 export let store = configureStore()
->>>>>>> new-version
 
 const ApiApp = () => {
   return (
     <Provider store={store}>
-<<<<<<< HEAD
-      <Router history={history}>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/films' component={Films}/>
-          <Route path='/people' component={People}/>
-          <Route path='/planets' component={Planets}/>
-          <Route path='/species' component={Species}/>
-          <Route path='/starships' component={Starships}/>
-          <Route path='/vehicles' component={Vehicles}/>
-        </Switch>  
-      </Router>
-=======
       <ConnectedRouter history={history}>
         <Switch>
           <Route path='/' render={Home}></Route>
@@ -70,7 +33,6 @@ const ApiApp = () => {
           <Route path='/vehicles' render={Vehicles}></Route>
         </Switch>
       </ConnectedRouter>    
->>>>>>> new-version
     </Provider>
   )
 }

@@ -17,8 +17,4 @@ const Section = ({ name }) => {
 Section.propTypes = {
   category: PropTypes.string.isRequired
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> new-version
 export default Section;

@@ -1,10 +1,6 @@
 //npm import
 import React from 'react';
 import PropTypes from 'prop-types';
-<<<<<<< HEAD
-
-=======
->>>>>>> new-version
 //local import
 
 const Article = ({ name }) => {
